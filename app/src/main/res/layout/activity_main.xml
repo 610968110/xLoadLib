@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lbx.xload.MainActivity">
+
+    <lbx.xloadlib.view.DefaultDownloadView
+        android:id="@+id/downloadView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        app:dl_bg="@color/white"
+        app:dl_centerImgSize="6dp"
+        app:dl_circleWidth="1dp"
+        app:dl_errColor="@color/red"
+        app:dl_errImg="@drawable/err"
+        app:dl_normalColor="@color/blue_light"
+        app:dl_normalImg="@drawable/normal"
+        app:dl_runningImg="@drawable/running"
+        app:dl_startColor="@color/blue_light"
+        app:dl_successColor="@color/green_light"
+        app:dl_waitColor="@color/gray"
+        app:dl_waitImg="@drawable/wait" />
+
+</RelativeLayout>
