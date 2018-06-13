@@ -47,9 +47,9 @@ public abstract class BaseDownLoadCallback implements ServiceConnection {
     public void onLoading(String key, long total, long current, float percent, boolean isUploading) {
     }
 
-    public abstract void onSuccess(String var1, File var2);
+    public abstract void onSuccess(String key, File file);
 
-    public abstract void onFailure(String var1, String var2);
+    public abstract void onFailure(String key, String e);
 
     public void onFinished(String key, boolean isSuccess) {
     }

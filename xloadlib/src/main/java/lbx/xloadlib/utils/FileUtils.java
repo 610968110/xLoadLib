@@ -334,7 +334,6 @@ public class FileUtils {
                 fis = new FileInputStream(file);
                 size = (long)fis.available();
             } else {
-                file.createNewFile();
                 Log.e("获取文件大小", "文件不存在!");
             }
 

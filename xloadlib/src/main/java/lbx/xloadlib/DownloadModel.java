@@ -108,11 +108,9 @@ public class DownloadModel {
                 }
             }
         }
-
         if (callback != null) {
             callback.finish(list);
         }
-
     }
 
     public void httpFileDownloadFinish(List<RecFile> recFiles, BaseDownloadFinishCallback callback) throws InterruptedException, ExecutionException {
@@ -130,7 +128,7 @@ public class DownloadModel {
             for (int j = 0; j < futures.size(); ++j) {
                 Future<RecFile> fileFuture = futures.get(j);
                 if (fileFuture.isDone()) {
-                    RecFile file =  fileFuture.get();
+                    RecFile file = fileFuture.get();
                     if (file.isDownloadFinish()) {
                         suc.add(file);
                     } else {
@@ -142,12 +140,12 @@ public class DownloadModel {
                     }
                 }
             }
-
             if (callback != null) {
                 callback.scanDesc(suc, err);
-                callback.finish(recFiles);
             }
         }
-
+        if (callback != null) {
+            callback.finish(recFiles);
+        }
     }
 }
